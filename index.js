@@ -184,10 +184,10 @@ new docx.Paragraph({
             ],
           }]
         });
-
+const fileName = document.getElementById('ccode').value + '_Syllabus.docx'
   docx.Packer.toBlob(doc).then(blob => {
     console.log(blob);
-    saveAs(blob, "example.docx");
+    saveAs(blob, fileName);
     console.log("Document created successfully");
 
         });
